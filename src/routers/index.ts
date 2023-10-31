@@ -5,10 +5,10 @@ import { realEstateRouter } from "./realEstate.router";
 import { scheduleRouter } from "./schedule.router";
 import { sessionRouter } from "./session.router";
 
-export const routes: Router = Router()
+export const routes: Router = Router();
 
-routes.use('/users', userRouter)
-routes.use('/login', sessionRouter)
-routes.use('/categories', categoryRouter)
-routes.use('/realEstate', realEstateRouter)
-routes.use('/schedules', scheduleRouter)
+routes.use("/users", userRouter);
+routes.use("/login", sessionRouter);
+routes.use("/categories", categoryRouter);
+routes.use("/realEstate", realEstateRouter);
+routes.use("/schedules", scheduleRouter);

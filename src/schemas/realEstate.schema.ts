@@ -10,11 +10,15 @@ export const realEstateSchema = z.object({
   address: z.object({
     street: z.string().max(45),
     zipCode: z.string().max(8),
-    number:z.number().int().positive(),
+    number: z.number().int().positive(),
     city: z.string().max(20),
     state: z.string().max(2),
   }),
-  categoryId: z.number().int().positive()
-})
+  categoryId: z.number().int().positive(),
+});
 
-export const createRealEstateSchema = realEstateSchema.omit({ id: true, createdAt: true, updateAt: true })
+export const createRealEstateSchema = realEstateSchema.omit({
+  id: true,
+  createdAt: true,
+  updateAt: true,
+});
